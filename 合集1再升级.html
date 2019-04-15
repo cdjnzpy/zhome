@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        cssts
+    </title>
+    <style>
+    @keyframes backs{
+        0%{box-shadow:0 0 15px rgb(221, 22, 62,.75);border-color: rgb(220, 20, 60,.75);}
+        100%{box-shadow:0 0 15px rgb(220, 20, 60,1);border-color: rgb(220, 20, 60,1);}
+        }
+    @keyframes photo1{
+        0%{position: absolute;left: 0px;}
+        8%{position: absolute;left: 250px;transform: scale(2,2);z-index: -1;}
+        12%{position: absolute;left: 250px;transform: scale(2,2);z-index: -4;}
+        20%{position: absolute;left: 500px;transform: scale(1,1);z-index: -4}
+        80%{position: absolute;left: 500px;transform: scale(1,1);z-index: -4}
+        85%{position: absolute;left:0px;z-index: -1}
+        100%{position: absolute;left:0px;z-index: -1}
+    }
+    
+    
+    @keyframes photo2{
+        0%{position: absolute;left: 0px;}
+        20%{position: absolute;left: 0px;transform: scale(1,1);z-index: -2;}
+        28%{position: absolute;left: 250px;transform: scale(2,2);z-index: -3;}
+        32%{position: absolute;left: 250px;transform: scale(2,2);z-index: -3}
+        40%{position: absolute;left: 500px;transform: scale(1,1);z-index: -3}
+        85%{position: absolute;left: 500px;transform: scale(1,1);z-index: -3}
+        90%{position: absolute;left:0px;z-index: -2}
+        100%{position: absolute;left:0px;z-index: -2}
+
+    }
+    @keyframes photo3{
+        0%{position: absolute;left: 0px;}
+        40%{position: absolute;left: 0px;transform: scale(1,1);z-index: -3;}
+        48%{position: absolute;left: 250px;transform: scale(2,2);z-index: -2;}
+        52%{position: absolute;left: 250px;transform: scale(2,2);z-index: -2}
+        60%{position: absolute;left: 500px;transform: scale(1,1);z-index: -2}
+        90%{position: absolute;left: 500px;transform: scale(1,1);z-index: -2}
+        95%{position: absolute;left:0px;z-index: -3}
+        100%{position: absolute;left:0px;z-index: -3}
+
+    }
+    @keyframes photo4{
+        0%{position: absolute;left: 0px;}
+        60%{position: absolute;left: 0px;transform: scale(1,1);z-index: -4;}
+        68%{position: absolute;left: 250px;transform: scale(2,2);z-index: -1;}
+        72%{position: absolute;left: 250px;transform: scale(2,2);z-index: -1}
+        80%{position: absolute;left: 500px;transform: scale(1,1);z-index: -1}
+        95%{position: absolute;left: 500px;transform: scale(1,1);z-index: -1}
+        100%{position: absolute;left:0px;z-index: -4}
+    }
+
+    @keyframes bgca1{
+        50%{background-color:rgba(76, 198, 247,1)}
+        64%{background-color: rgba(0,0,0,0);}
+        100%{background-color: rgba(0,0,0,0);}
+    }
+    @keyframes bgca2{
+        64%{background-color:rgba(57, 132, 194,1)}
+        73%{background-color: rgba(0,0,0,0);}
+        100%{background-color: rgba(0,0,0,0);}
+
+    }    
+    @keyframes bgca3{
+        73%{background-color:rgba(84, 124, 199,1)}
+        82%{background-color: rgba(0,0,0,0);}
+        100%{background-color: rgba(0,0,0,0);}
+
+    }    
+    @keyframes bgca4{
+        82%{background-color:rgba(107, 90, 201,1)}
+        91%{background-color: rgba(0,0,0,0);}
+        100%{background-color: rgba(0,0,0,0);}
+
+    }
+    @keyframes bgc{
+        0%{background-color: #fff;}
+        50%{background-color: #fff;}
+        51%{background-color: rgb(226, 81, 81)}
+        100%{background-color: rgb(226, 81, 81)}
+    }
+
+    @keyframes headbring1{
+        0%{background-color: rgb(253, 125, 125)}
+        8.33%{background-color: rgb(253, 195, 120)}        
+        16.67%{background-color: rgb(255, 235, 122)}
+        25%{background-color: rgb(215, 250, 120)}
+        33.33%{background-color: rgb(139, 250, 117)}
+        41.67%{background-color: rgb(118, 248, 183)}
+        50%{background-color: rgb(125, 214, 250)}
+        58.33%{background-color: rgb(118, 149, 248)}
+        66.66%{background-color: rgb(135, 115, 247)}
+        75%{background-color: rgb(195, 115, 248)}
+        83.33%{background-color: rgb(139, 36, 224)}
+        91.67%{background-color: rgb(248, 117, 198)}
+        100%{background-color: rgb(253, 125, 125)}
+    }
+    @keyframes headbring2{
+        0%	{background-color: rgb(253,195,120)}
+        8.33%	{background-color: rgb(255,235,122)}
+        16.67%	{background-color: rgb(215,250,120)}
+        25%	{background-color: rgb(139,250,117)}
+        33.33%	{background-color: rgb(118,248,183)}
+        41.67%	{background-color: rgb(125,214,250)}
+        50%	{background-color: rgb(118,149,248)}
+        58.33%	{background-color: rgb(135,115,247)}
+        66.66%	{background-color: rgb(195,115,248)}
+        75%	{background-color: rgb(139,36,224)}
+        83.33%	{background-color: rgb(248,117,198)}
+        91.67%	{background-color: rgb(253,125,125)}
+        100%	{background-color: rgb(253,195,120)}        
+
+    }
+    @keyframes headbring3{
+        0%	{background-color: rgb(255,235,122)}
+        8.33%	{background-color: rgb(215,250,120)}
+        16.67%	{background-color: rgb(139,250,117)}
+        25%	{background-color: rgb(118,248,183)}
+        33.33%	{background-color: rgb(125,214,250)}
+        41.67%	{background-color: rgb(118,149,248)}
+        50%	{background-color: rgb(135,115,247)}
+        58.33%	{background-color: rgb(195,115,248)}
+        66.66%	{background-color: rgb(139,36,224)}
+        75%	{background-color: rgb(248,117,198)}
+        83.33%	{background-color: rgb(253,125,125)}
+        91.67%	{background-color: rgb(253,195,120)}
+        100%	{background-color: rgb(255,235,122)}
+
+    }
+    @keyframes headbring4{
+        0%	{background-color: rgb(215,250,120)}
+        8.33%	{background-color: rgb(139,250,117)}
+        16.67%	{background-color: rgb(118,248,183)}
+        25%	{background-color: rgb(125,214,250)}
+        33.33%	{background-color: rgb(118,149,248)}
+        41.67%	{background-color: rgb(135,115,247)}
+        50%	{background-color: rgb(195,115,248)}
+        58.33%	{background-color: rgb(139,36,224)}
+        66.66%	{background-color: rgb(248,117,198)}
+        75%	{background-color: rgb(253,125,125)}
+        83.33%	{background-color: rgb(253,195,120)}
+        91.67%	{background-color: rgb(255,235,122)}
+        100%	{background-color: rgb(215,250,120)}
+
+    }
+    @keyframes headbring5{
+        0%	{background-color: rgb(139,250,117)}
+        8.33%	{background-color: rgb(118,248,183)}
+        16.67%	{background-color: rgb(125,214,250)}
+        25%	{background-color: rgb(118,149,248)}
+        33.33%	{background-color: rgb(135,115,247)}
+        41.67%	{background-color: rgb(195,115,248)}
+        50%	{background-color: rgb(139,36,224)}
+        58.33%	{background-color: rgb(248,117,198)}
+        66.66%	{background-color: rgb(253,125,125)}
+        75%	{background-color: rgb(253,195,120)}
+        83.33%	{background-color: rgb(255,235,122)}
+        91.67%	{background-color: rgb(215,250,120)}
+        100%	{background-color: rgb(139,250,117)}
+
+    }
+    @keyframes headbring6{
+        0%	{background-color: rgb(118,248,183)}
+        8.33%	{background-color: rgb(125,214,250)}
+        16.67%	{background-color: rgb(118,149,248)}
+        25%	{background-color: rgb(135,115,247)}
+        33.33%	{background-color: rgb(195,115,248)}
+        41.67%	{background-color: rgb(139,36,224)}
+        50%	{background-color: rgb(248,117,198)}
+        58.33%	{background-color: rgb(253,125,125)}
+        66.66%	{background-color: rgb(253,195,120)}
+        75%	{background-color: rgb(255,235,122)}
+        83.33%	{background-color: rgb(215,250,120)}
+        91.67%	{background-color: rgb(139,250,117)}
+        100%	{background-color: rgb(118,248,183)}
+
+    }
+    @keyframes headbring7{
+        0%	{background-color: rgb(125,214,250)}
+        8.33%	{background-color: rgb(118,149,248)}
+        16.67%	{background-color: rgb(135,115,247)}
+        25%	{background-color: rgb(195,115,248)}
+        33.33%	{background-color: rgb(139,36,224)}
+        41.67%	{background-color: rgb(248,117,198)}
+        50%	{background-color: rgb(253,125,125)}
+        58.33%	{background-color: rgb(253,195,120)}
+        66.66%	{background-color: rgb(255,235,122)}
+        75%	{background-color: rgb(215,250,120)}
+        83.33%	{background-color: rgb(139,250,117)}
+        91.67%	{background-color: rgb(118,248,183)}
+        100%	{background-color: rgb(125,214,250)}
+
+    }
+    @keyframes headbring8{
+        0%	{background-color: rgb(118,149,248)}
+        8.33%	{background-color: rgb(135,115,247)}
+        16.67%	{background-color: rgb(195,115,248)}
+        25%	{background-color: rgb(139,36,224)}
+        33.33%	{background-color: rgb(248,117,198)}
+        41.67%	{background-color: rgb(253,125,125)}
+        50%	{background-color: rgb(253,195,120)}
+        58.33%	{background-color: rgb(255,235,122)}
+        66.66%	{background-color: rgb(215,250,120)}
+        75%	{background-color: rgb(139,250,117)}
+        83.33%	{background-color: rgb(118,248,183)}
+        91.67%	{background-color: rgb(125,214,250)}
+        100%	{background-color: rgb(118,149,248)}
+
+    }
+    @keyframes headbring9{
+        0%	{background-color: rgb(135,115,247)}
+        8.33%	{background-color: rgb(195,115,248)}
+        16.67%	{background-color: rgb(139,36,224)}
+        25%	{background-color: rgb(248,117,198)}
+        33.33%	{background-color: rgb(253,125,125)}
+        41.67%	{background-color: rgb(253,195,120)}
+        50%	{background-color: rgb(255,235,122)}
+        58.33%	{background-color: rgb(215,250,120)}
+        66.66%	{background-color: rgb(139,250,117)}
+        75%	{background-color: rgb(118,248,183)}
+        83.33%	{background-color: rgb(125,214,250)}
+        91.67%	{background-color: rgb(118,149,248)}
+        100%	{background-color: rgb(135,115,247)}
+
+    }
+    @keyframes headbring10{        
+        0%	{background-color: rgb(195,115,248)}
+        8.33%	{background-color: rgb(139,36,224)}
+        16.67%	{background-color: rgb(248,117,198)}
+        25%	{background-color: rgb(253,125,125)}
+        33.33%	{background-color: rgb(253,195,120)}
+        41.67%	{background-color: rgb(255,235,122)}
+        50%	{background-color: rgb(215,250,120)}
+        58.33%	{background-color: rgb(139,250,117)}
+        66.66%	{background-color: rgb(118,248,183)}
+        75%	{background-color: rgb(125,214,250)}
+        83.33%	{background-color: rgb(118,149,248)}
+        91.67%	{background-color: rgb(135,115,247)}
+        100%	{background-color: rgb(195,115,248)}
+
+    }
+    @keyframes headbring11{
+        0%	{background-color: rgb(139,36,224)}
+        8.33%	{background-color: rgb(248,117,198)}
+        16.67%	{background-color: rgb(253,125,125)}
+        25%	{background-color: rgb(253,195,120)}
+        33.33%	{background-color: rgb(255,235,122)}
+        41.67%	{background-color: rgb(215,250,120)}
+        50%	{background-color: rgb(139,250,117)}
+        58.33%	{background-color: rgb(118,248,183)}
+        66.66%	{background-color: rgb(125,214,250)}
+        75%	{background-color: rgb(118,149,248)}
+        83.33%	{background-color: rgb(135,115,247)}
+        91.67%	{background-color: rgb(195,115,248)}
+        100%	{background-color: rgb(139,36,224)}
+
+    }
+    @keyframes headbring12{
+        0%	{background-color: rgb(248,117,198)}
+        8.33%	{background-color: rgb(253,125,125)}
+        16.67%	{background-color: rgb(253,195,120)}
+        25%	{background-color: rgb(255,235,122)}
+        33.33%	{background-color: rgb(215,250,120)}
+        41.67%	{background-color: rgb(139,250,117)}
+        50%	{background-color: rgb(118,248,183)}
+        58.33%	{background-color: rgb(125,214,250)}
+        66.66%	{background-color: rgb(118,149,248)}
+        75%	{background-color: rgb(135,115,247)}
+        83.33%	{background-color: rgb(195,115,248)}
+        91.67%	{background-color: rgb(139,36,224)}
+        100%	{background-color: rgb(248,117,198)}
+
+    }
+
+
+
+
+    .doate{width:1200px;height: 50px;background-color: rgb(255, 255, 255);}
+    .diate1{float: left;width: 100px;height: 50px;background-color: rgb(253, 125, 125);animation:  headbring1 1s ease-in-out infinite alternate}
+    .diate2{float: left;width: 100px;height: 50px;background-color: rgb(253, 195, 120);animation:  headbring2 1s ease-in-out infinite alternate}
+    .diate3{float: left;width: 100px;height: 50px;background-color: rgb(255, 235, 122);animation:  headbring3 1s ease-in-out infinite alternate}
+    .diate4{float: left;width: 100px;height: 50px;background-color: rgb(215, 250, 120);animation:  headbring4 1s ease-in-out infinite alternate}
+    .diate5{float: left;width: 100px;height: 50px;background-color: rgb(139, 250, 117);animation:  headbring5 1s ease-in-out infinite alternate}
+    .diate6{float: left;width: 100px;height: 50px;background-color: rgb(118, 248, 183);animation:  headbring6 1s ease-in-out infinite alternate}
+    .diate7{float: left;width: 100px;height: 50px;background-color: rgb(125, 214, 250);animation:  headbring7 1s ease-in-out infinite alternate}
+    .diate8{float: left;width: 100px;height: 50px;background-color: rgb(118, 149, 248);animation:  headbring8 1s ease-in-out infinite alternate}
+    .diate9{float: left;width: 100px;height: 50px;background-color: rgb(135, 115, 247);animation:  headbring9 1s ease-in-out infinite alternate}
+    .diate10{float: left;width: 100px;height: 50px;background-color: rgb(195, 115, 248);animation:  headbring10 1s ease-in-out infinite alternate}
+    .diate11{float: left;width: 100px;height: 50px;background-color: rgb(139, 36, 224);animation:  headbring11 1s ease-in-out infinite alternate}
+    .diate12{float: left;width: 100px;height: 50px;background-color: rgb(248, 117, 198);animation:  headbring12 1s ease-in-out infinite alternate}
+
+
+
+
+
+
+
+
+    .div1{position: relative;top:200px;left: 0px;height: 100px;width: 200px;background-color: rgb(93, 160, 119);z-index: 10;}
+    .div2{position: relative;
+            top:300px;left: 0px;
+            height: 100px;width: 200px;
+            background-color: rgb(196, 129, 129);
+            opacity: 0;transition: 2s;
+            z-index: 10;}
+    .div3{position: relative;
+            left:-600px;
+            height: 500px;width:600px;
+            opacity: 0;transition: 2s;
+            background-color: rgb(180, 107, 107);
+            clear: both;}
+    .div4{height: 300px;width: 600px;background-color: #fff;z-index: -10;position: relative;top:150px}
+
+    
+    .indiv3div1{float: left;outline: solid;outline-width: 1px;height: 50px;width: 150px;background-color: rgb(190, 201, 90);}
+    .indiv3div2{float: left;outline: solid;outline-width: 1px;height: 50px;width: 150px;background-color: rgb(190, 201, 90);}
+    .indiv3div3{float: left;outline: solid;outline-width: 1px;height: 50px;width: 150px;background-color: rgb(190, 201, 90);}
+    .indiv3div4{float: left;outline: solid;outline-width: 1px;height: 50px;width: 150px;background-color: rgb(190, 201, 90);}
+
+    .in3div1{ height:50px;width: 150px;background-color: rgb(0, 255, 13);position: absolute;top:0px;left:300px;z-index: -1;opacity: 1;}
+    .in3div2{ height:50px;width: 150px;background-color: rgb(74, 187, 79);position: absolute;top:0px;left:300px;z-index: -2;opacity: 1;}
+    .in3div3{ height:50px;width: 150px;background-color: rgb(84, 177, 89,1);position: absolute;top:0px;left:300px;z-index: -3;opacity: 1;}
+    .in3div4{ height:50px;width: 150px;background-color: rgb(50, 119, 53);position: absolute;top:0px;left:300px;z-index: -4;opacity: 1;}
+
+    .inindiv{position: relative;
+            left:150px;
+            top: -33px;
+            height: 50px;width:600px;
+            opacity: 0;
+            clear: both;
+            z-index: -10;
+            }
+
+    .inindiv1{float: left;outline: solid;outline-width: 1px;height: 50px;width: 150px;background-color: rgb(76, 198, 247);position: relative;top:100px;left:650px;opacity: 0;}
+    .inindiv2{float: left;outline: solid;outline-width: 1px;height: 50px;width: 150px;background-color: rgb(57, 132, 194);position: relative;top:-100px;left:500px;opacity: 0}
+    .inindiv3{float: left;outline: solid;outline-width: 1px;height: 50px;width: 150px;background-color: rgb(84, 124, 199);position: relative;top:100px;left:-500px;opacity: 0}
+    .inindiv4{float: left;outline: solid;outline-width: 1px;height: 50px;width: 150px;background-color: rgb(107, 90, 201);position: relative;top:-100px;left:-650px;opacity: 0}
+    .slide{background-color: rgb(84, 177, 89);opacity: 0.6;height: 50px;width: 150px;position: absolute;left: -150px;z-index: -9;;}
+
+
+
+    .photos1{height: 150px;width:100px;background-color: rgb(0, 55, 117);position: absolute;top:75px;z-index: -1;animation: photo1 16s linear infinite}
+    .photos2{height: 150px;width:100px;background-color: rgb(0, 255, 234);position: absolute;top:75px;z-index: -2;animation: photo2 16s linear infinite}
+    .photos3{height: 150px;width:100px;background-color: rgb(180, 29, 185);position: absolute;top:75px;z-index: -3;animation: photo3 16s linear infinite}
+    .photos4{height: 150px;width:100px;background-color: rgb(47, 245, 96);position: absolute;top:75px;z-index: -4;animation: photo4 16s linear infinite}
+    
+    .photoint1{height: 25px;width: 100px;background-color: #fff;position: relative;top:85px;opacity: 0;}
+    .photoint2{height: 25px;width: 100px;background-color: #fff;position: relative;top:85px;opacity: 0;}
+    .photoint3{height: 25px;width: 100px;background-color: #fff;position: relative;top:85px;opacity: 0;}
+    .photoint4{height: 25px;width: 100px;background-color: #fff;position: relative;top:85px;opacity: 0;}
+
+
+    .gifpoz{position: relative;top:10px;left: 50px;transform: rotate(90deg)}
+    .gifpoz2{position: relative;top:10px;left: 50px;transform: rotate(90deg)}
+    
+    .div1:hover{transform:translate(0,-10px);transition: 2s;background-color: rgb(235, 117, 88);animation: backs 2s ease-in-out infinite alternate;}
+    .div1:hover+.div2{opacity: 1;}
+    .div1:hover~.div3{opacity: 1;transform: translate(810px,0);}
+    .div3:hover{opacity: 1;transform: translate(810px,0);}
+    .div4:hover div{animation-play-state: paused;}
+
+    .indiv3div3:hover .gifpoz{transform: rotate(180deg);transition: 1s}
+    .indiv3div3:hover .in3div1{transform: translate(0,50px);opacity: 1;transition: 0.5s}
+    .indiv3div3:hover .in3div2{transform: translate(0,100px);opacity: 1;transition: 1s}
+    .indiv3div3:hover .in3div3{transform: translate(0,150px);opacity: 1;transition: 1.5s}
+    .indiv3div3:hover .in3div4{transform: translate(0,200px);opacity: 1;transition: 2s}
+
+    .in3div3:hover  .inindiv{animation: bgc 4s;animation-fill-mode: forwards;opacity: 1;transition: 2s}
+    .in3div3:hover  .inindiv1{transform: translate(-650px,-100px);opacity: 1;transition: 2s;animation: bgca1 4.5s;animation-fill-mode: forwards;}
+    .in3div3:hover  .inindiv2{transform: translate(-500px,100px);opacity: 1;transition: 2s;animation: bgca2 4.5s;animation-fill-mode: forwards}
+    .in3div3:hover  .inindiv3{transform: translate(500px,-100px);opacity: 1;transition: 2s;animation: bgca3 4.5s;animation-fill-mode: forwards}
+    .in3div3:hover  .inindiv4{transform: translate(650px,100px);opacity: 1;transition: 2s;animation: bgca4 4.5s;animation-fill-mode: forwards}
+
+    .photos1:hover  .photoint1{opacity: 0.6;transition: 1s}
+    .photos2:hover  .photoint2{opacity: 0.6;transition: 1s}
+    .photos3:hover  .photoint3{opacity: 0.6;transition: 1s}
+    .photos4:hover  .photoint4{opacity: 0.6;transition: 1s}
+
+    .inindiv1:hover~.slide{transform: translate(150px,0);transition: 1s;}
+    .inindiv2:hover~.slide{transform: translate(300px,0);transition: 1s;}
+    .inindiv3:hover~.slide{transform: translate(450px,0);transition: 1s;}
+    .inindiv4:hover~.slide{transform: translate(600px,0);transition: 1s;}
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <div class="doate">
+        <div class="diate1"></div>
+        <div class="diate2"></div>
+        <div class="diate3"></div>
+        <div class="diate4"></div>
+        <div class="diate5"></div>
+        <div class="diate6"></div>
+        <div class="diate7"></div>
+        <div class="diate8"></div>
+        <div class="diate9"></div>
+        <div class="diate10"></div>
+        <div class="diate11"></div>
+        <div class="diate12"></div>
+
+
+    </div>
+    <div class="div1">请用鼠标滑过这里</br><b>针对上条横幅换了表现方式</b></div>
+    <div class="div2">这里是二号</div>
+    <div class="div3">
+        <div class="indiv3div1">鼠标停在轮播框内可以暂停轮播</div>
+        <div class="indiv3div2">鼠标停在展板上面可以查看一些属性</div>
+        <div class="indiv3div3">3这里！<img src="tows.png" class="gifpoz" width="50px">
+            <div class="in3div1">1</div>
+            <div class="in3div2">2</div>
+            <div class="in3div3">3这里<img src="tows.png" class="gifpoz2" width="50px">
+                <div class="inindiv">
+                    <div class="inindiv1">趣闻</div>
+                    <div class="inindiv2">驱蚊</div>
+                    <div class="inindiv3">驱魔</div>
+                    <div class="inindiv4">驱鬼</div>
+                    <div class="slide"> </div>
+        </div>
+        
+        
+        </div>
+        <div class="in3div4">4</div>
+
+
+        </div>
+        <div class="indiv3div4">动画轮播时长共16s</div>
+        <div class="div4">
+            <div class="photos1">展板（可贴图）1
+                <div class="photoint1">今天天气不错</div>
+            </div>
+            <div class="photos2">展板（可贴图）2
+                <div class="photoint2">多喝热水</div>
+            </div>
+            <div class="photos3">展板（可贴图）3
+                <div class="photoint3">红红火火恍恍惚惚</div>
+            </div>
+            <div class="photos4">展板（可贴图）4
+                <div class="photoint4">你是个好人</div>
+            </div>
+
+        </div>
+        </div>
+        
+        
+</body>
+</html>
+
+
+
+<style>
+
+
+
+{background-color: rgb(253, 195, 120)}        
+{background-color: rgb(255, 235, 122)}
+{background-color: rgb(215, 250, 120)}
+{background-color: rgb(139, 250, 117)}
+{background-color: rgb(118, 248, 183)}
+{background-color: rgb(125, 214, 250)}
+{background-color: rgb(118, 149, 248)}
+{background-color: rgb(135, 115, 247)}
+{background-color: rgb(195, 115, 248)}
+{background-color: rgb(139, 36, 224)}
+{background-color: rgb(248, 117, 198)}
+{background-color: rgb(253, 125, 125)}
+{background-color: rgb(253, 195, 120)} 
+
+
+</style>
